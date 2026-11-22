@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Secret Santa Run｜NID RC Family Day 報名</title>
-<meta name="description" content="2026.12.06（日）09:00–11:00，大安森林公園（集合點：6 號洗手間旁草皮）。聖誕耐力組・聖誕歡樂組，跑完一起交換 Secret Santa 禮物。免費、名額 100 人、12/3 截止。" />
+<meta name="description" content="2026.12.06（日）09:00–11:00，大安森林公園（集合點：6 號洗手間旁草皮）。聖誕耐力組・聖誕歡樂組，跑完一起交換 Secret Santa 禮物。NID 當期學員免費、非當期學員 NT$500，名額 100 人、12/3 截止。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -406,7 +406,7 @@ footer .fl{color:#DDEBE2}
     <div class="fact"><p class="k">DATE</p><p class="v">12/6（日）</p><p class="s">2026 年</p></div>
     <div class="fact"><p class="k">TIME</p><p class="v">09:00 – 11:00</p><p class="s">兩組統一 09:00 報到</p></div>
     <div class="fact"><p class="k">PLACE</p><p class="v">大安森林公園</p><p class="s">集合點：6 號洗手間旁草皮</p></div>
-    <div class="fact"><p class="k">FEE</p><p class="v">免費</p><p class="s">名額 100 人・<span data-close-short>–</span> 截止</p></div>
+    <div class="fact"><p class="k">FEE</p><p class="v">當期學員免費</p><p class="s">非當期學員 NT$500・報到時現場繳</p></div>
   </div>
 </div>
 
@@ -596,6 +596,7 @@ footer .fl{color:#DDEBE2}
             <option>Base+戰隊</option>
             <option>非 NID 當期學員</option>
           </select>
+          <p class="hint">選「非 NID 當期學員」者酌收 <b>NT$500</b>，當天報到時現場現金繳交。</p>
           <p class="err" data-for="club">請選擇班級／戰隊</p>
         </div>
 
@@ -895,7 +896,8 @@ footer .fl{color:#DDEBE2}
       document.getElementById("successMsg").innerHTML =
         "報名成功（" + esc(p.category) + "）！確認信會在幾分鐘內寄到你的信箱。<br />" +
         "12/6（日）" + info +
-        (p.gift === "參加" ? "<br />🎁 記得帶一份包裝好的交換禮物，報到時交給教練。" : "");
+        (p.gift === "參加" ? "<br />🎁 記得帶一份包裝好的交換禮物，報到時交給教練。" : "") +
+        (p.club === "非 NID 當期學員" ? "<br />💰 非當期學員報名費 NT$500，請於報到時現場現金繳交。" : "");
       successScreen.classList.add("show");
       successScreen.scrollIntoView({ behavior: "smooth", block: "center" });
     }
