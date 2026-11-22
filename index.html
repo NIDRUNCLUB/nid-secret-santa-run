@@ -340,6 +340,16 @@ footer .fl{color:#DDEBE2}
 #groups .gel-v{margin:0;font-size:17px;font-weight:900;line-height:1.5}
 #groups .gel-s{margin:6px 0 0;font-size:14px;line-height:1.6;color:#4A5A50}
 @media (max-width:820px){#groups .gel-grid{grid-template-columns:1fr}}
+/* ===== SIGNUP PERKS ===== */
+.perks{background:#FBF7EF;padding:26px 0 30px;border-bottom:1px solid rgba(15,42,31,.1)}
+.perks-k{margin:0 0 14px;font-family:var(--disp);letter-spacing:.14em;font-size:14px;color:#C41E2A;text-align:center}
+.perks-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.perk{background:#fff;border:2px solid #0F2A1F;border-radius:16px;padding:18px 20px;box-shadow:0 5px 0 #F0B83A;text-align:center}
+.perk-b{margin:0 0 6px;font-size:14px;font-weight:700;letter-spacing:.06em;color:#1F8A4C}
+.perk-v{margin:0;font-size:22px;font-weight:900;line-height:1.45;color:#0F2A1F}
+#groups .gel-grid.one{grid-template-columns:1fr}
+@media (max-width:820px){.perk-v{font-size:19px}}
+@media (max-width:420px){.perks-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -391,6 +401,22 @@ footer .fl{color:#DDEBE2}
     <div class="fact"><p class="k">FEE</p><p class="v">免費</p><p class="s">名額 100 人・<span data-close-short>–</span> 截止</p></div>
   </div>
 </div>
+
+<section class="perks" id="perks">
+  <div class="wrap">
+    <p class="perks-k">S I G N U P　G I F T S｜報名好禮</p>
+    <div class="perks-grid">
+      <div class="perk">
+        <p class="perk-b">美舒律 MegRhythm 贊助</p>
+        <p class="perk-v">每位報名者<br />試用包 1 份</p>
+      </div>
+      <div class="perk">
+        <p class="perk-b">NID × StepV 聯名果膠</p>
+        <p class="perk-v">報名前 30 名<br />報到時領取 1 包</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="block dark" id="groups">
   <div class="wrap">
@@ -452,11 +478,7 @@ footer .fl{color:#DDEBE2}
 
     <div class="gel">
       <p class="gel-k">NID × StepV｜聯名果膠</p>
-      <div class="gel-grid">
-        <div class="gel-item">
-          <p class="gel-t">報名早鳥禮</p>
-          <p class="gel-v">報名前 30 名，報到時領取果膠 1 包</p>
-        </div>
+      <div class="gel-grid one">
         <div class="gel-item">
           <p class="gel-t">前三名獎品</p>
           <p class="gel-v">第一名 3 包・第二名 2 包・第三名 1 包</p>
