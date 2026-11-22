@@ -350,6 +350,14 @@ footer .fl{color:#DDEBE2}
 #groups .gel-grid.one{grid-template-columns:1fr}
 @media (max-width:820px){.perk-v{font-size:19px}}
 @media (max-width:420px){.perks-grid{grid-template-columns:1fr}}
+/* ===== MEETING POINT ===== */
+#schedule .meet-lead{margin:-6px 0 18px;font-size:16px;line-height:1.7;font-weight:700}
+#schedule .meet-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+#schedule .meet-map{display:block;text-decoration:none}
+#schedule .meet-map img{display:block;width:100%;height:auto;border:3px solid #0F2A1F;border-radius:14px;box-shadow:0 6px 0 #F0B83A}
+#schedule .meet-map span{display:block;text-align:center;font-size:13px;color:var(--mute-l);margin-top:10px}
+#schedule .sched td:first-child{white-space:nowrap}
+@media (max-width:820px){#schedule .meet-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -396,7 +404,7 @@ footer .fl{color:#DDEBE2}
 <div class="facts">
   <div class="wrap facts-grid">
     <div class="fact"><p class="k">DATE</p><p class="v">12/6（日）</p><p class="s">2026 年</p></div>
-    <div class="fact"><p class="k">TIME</p><p class="v">09:00 – 11:00</p><p class="s">兩組分開報到</p></div>
+    <div class="fact"><p class="k">TIME</p><p class="v">09:00 – 11:00</p><p class="s">兩組統一 09:00 報到</p></div>
     <div class="fact"><p class="k">PLACE</p><p class="v">大安森林公園</p><p class="s">集合點：6 號洗手間旁草皮</p></div>
     <div class="fact"><p class="k">FEE</p><p class="v">免費</p><p class="s">名額 100 人・<span data-close-short>–</span> 截止</p></div>
   </div>
@@ -457,8 +465,8 @@ footer .fl{color:#DDEBE2}
           <span class="gcap">點圖放大路線圖</span>
         </a>
         <dl class="gi">
-          <dt>報到</dt><dd>09:35–09:50</dd>
-          <dt>開跑</dt><dd>10:00</dd>
+          <dt>報到</dt><dd>09:00–09:15</dd>
+          <dt>開跑</dt><dd>09:25</dd>
           <dt>起終點</dt><dd>安森大安號捐血車旁</dd>
           <dt>跑法</dt><dd>依路線圖自行完成</dd>
         </dl>
@@ -492,14 +500,22 @@ footer .fl{color:#DDEBE2}
 <section class="block paper" id="schedule">
   <div class="wrap">
     <p class="sec-eyebrow">C H E C K　I N</p>
-    <h2 class="sec-title">報到時間</h2>
-    <div class="sched-wrap">
-      <table class="sched">
-        <tr><th>組別</th><th>報到時間</th></tr>
-        <tr><td>聖誕耐力組</td><td>09:00–09:15</td></tr>
-        <tr><td>聖誕歡樂組</td><td>09:35–09:50</td></tr>
-        <tr class="all"><td>報到地點</td><td>大安森林公園 6 號洗手間旁草皮</td></tr>
-      </table>
+    <h2 class="sec-title">報到與集合點</h2>
+    <p class="meet-lead">兩組統一時間集合報到，一起開場、一起熱身，再一起帶開出發。</p>
+    <div class="meet-grid">
+      <div class="sched-wrap">
+        <table class="sched">
+          <tr><th>時間</th><th>兩組一起</th></tr>
+          <tr><td>09:00–09:15</td><td>集合報到</td></tr>
+          <tr><td>09:15–09:25</td><td>開場＋熱身</td></tr>
+          <tr><td>09:25</td><td>一起帶開出發</td></tr>
+          <tr class="all"><td>集合點</td><td>大安森林公園 6 號洗手間旁草皮</td></tr>
+        </table>
+      </div>
+      <a class="meet-map" href="meeting-point.jpg" target="_blank" rel="noopener">
+        <img src="meeting-point.jpg" alt="集合點地圖：大安森林公園 6 號洗手間旁草皮，位於兒童遊戲場南側、靠建國南路" width="895" height="1057" loading="lazy" />
+        <span>集合點地圖（點圖放大）</span>
+      </a>
     </div>
   </div>
 </section>
@@ -593,7 +609,7 @@ footer .fl{color:#DDEBE2}
             </label>
             <label class="pick">
               <input type="radio" name="category" value="聖誕歡樂組" />
-              <span class="box"><span class="pt">聖誕歡樂組</span><span class="pd">不拼時間・跑聖誕襪路線約 4.7K・10:00 開跑</span><span class="ccount" id="count-聖誕歡樂組">目前 <b>–</b> 人</span></span>
+              <span class="box"><span class="pt">聖誕歡樂組</span><span class="pd">不拼時間・跑聖誕襪路線約 4.7K・09:25 開跑</span><span class="ccount" id="count-聖誕歡樂組">目前 <b>–</b> 人</span></span>
               <span class="tick">✓</span>
             </label>
           </div>
@@ -875,9 +891,7 @@ footer .fl{color:#DDEBE2}
       loader.classList.remove("show");
       form.style.display = "none";
       document.getElementById("deadlineNote").style.display = "none";
-      var info = p.category === "聖誕耐力組"
-        ? "<b>09:00–09:15</b> 報到、09:25 開跑（集合點：6 號洗手間旁草皮）。"
-        : "<b>09:35–09:50</b> 報到、10:00 開跑（集合點：6 號洗手間旁草皮）。";
+      var info = "<b>09:00–09:15</b> 報到、09:15 開場暖身、09:25 一起帶開（集合點：6 號洗手間旁草皮）。";
       document.getElementById("successMsg").innerHTML =
         "報名成功（" + esc(p.category) + "）！確認信會在幾分鐘內寄到你的信箱。<br />" +
         "12/6（日）" + info +
