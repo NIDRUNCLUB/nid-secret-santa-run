@@ -362,6 +362,17 @@ footer .fl{color:#DDEBE2}
 .perks-grid{grid-template-columns:repeat(3,1fr)}
 .perk-s{margin:8px 0 0;font-size:14px;line-height:1.5;color:#4A5A50}
 @media (max-width:820px){.perks-grid{grid-template-columns:1fr}}
+/* ===== PODIUM (points + gel) ===== */
+#groups .podium{margin:24px 0 0;background:linear-gradient(90deg,#FFC81F,#FFE066,#FFC81F);color:#0F2A1F;border-radius:16px;padding:18px 20px 16px;box-shadow:0 6px 0 #B07A12}
+#groups .pod-k{margin:0 0 12px;font-family:var(--disp);letter-spacing:.1em;font-size:15px}
+#groups .pod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+#groups .pod-item{background:#FFFBEF;border:2px solid #0F2A1F;border-radius:12px;padding:12px 14px;text-align:center}
+#groups .pod-r{margin:0;font-size:14px;font-weight:700;letter-spacing:.08em;color:#C41E2A}
+#groups .pod-v{margin:4px 0 0;font-size:20px;font-weight:900;line-height:1.35}
+#groups .pod-g{margin:2px 0 0;font-size:16px;font-weight:700;color:#1F8A4C}
+#groups .pod-s{margin:12px 0 0;font-size:14px;line-height:1.6;font-weight:700}
+#groups .pod-v b,#groups .pod-g b{font-size:1.25em}
+@media (max-width:560px){#groups .pod-grid{gap:8px}#groups .pod-item{padding:10px 4px}#groups .pod-v{font-size:14px}#groups .pod-g{font-size:14px}#groups .pod-v b{display:block;font-size:26px;line-height:1.2}}
 </style>
 </head>
 <body>
@@ -488,20 +499,14 @@ footer .fl{color:#DDEBE2}
       </article>
     </div>
 
-    <div class="points">
-      <p class="fk">TEAM POINTS｜戰隊積分</p>
-      <p class="fv">兩組各前三名：第一名 +3、第二名 +2、第三名 +1</p>
-    </div>
-
-    <div class="gel">
-      <p class="gel-k">NID × StepV｜聯名果膠</p>
-      <div class="gel-grid one">
-        <div class="gel-item">
-          <p class="gel-t">前三名獎品</p>
-          <p class="gel-v">第一名 3 包・第二名 2 包・第三名 1 包</p>
-          <p class="gel-s">聖誕耐力組（圈數）、聖誕歡樂組（造型）、歡樂組創意限動作品，三個獎項各取前三名</p>
-        </div>
+    <div class="podium">
+      <p class="pod-k">前三名獎勵｜TEAM POINTS ＋ NID × StepV 聯名果膠</p>
+      <div class="pod-grid">
+        <div class="pod-item p1"><p class="pod-r">第一名</p><p class="pod-v">戰隊積分 <b>+3</b></p><p class="pod-g">果膠 <b>3</b> 包</p></div>
+        <div class="pod-item p2"><p class="pod-r">第二名</p><p class="pod-v">戰隊積分 <b>+2</b></p><p class="pod-g">果膠 <b>2</b> 包</p></div>
+        <div class="pod-item p3"><p class="pod-r">第三名</p><p class="pod-v">戰隊積分 <b>+1</b></p><p class="pod-g">果膠 <b>1</b> 包</p></div>
       </div>
+      <p class="pod-s">聖誕耐力組（圈數）、聖誕歡樂組（造型）前三名：戰隊積分＋果膠。歡樂組創意限動作品前三名：果膠。</p>
     </div>
   </div>
 </section>
